@@ -216,7 +216,7 @@ exports.generateQRCode = async (req, res) => {
                     // If QR code is not available
                     const currentTime = Date.now();
                     // Check if 20 seconds have passed
-                    if (currentTime - startTime >= 60000) {
+                    if (currentTime - startTime >= 160000) {
                         // If 20 seconds have passed and QR code is still not available, return 404
                         return res.status(404).json({ error: 'QR code not available' });
                     } else {
